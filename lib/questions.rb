@@ -106,10 +106,12 @@ end
 # becomes [1, 2, 3, 1, 2, 3]
 def double_array(array)
   [array, array].flatten
+  # or `array + array`
 end
 
 # convert a symbol into a string
 def turn_symbol_into_string(symbol)
+  symbol.to_s
 end
 
 # get the average from an array, rounded to the nearest integer
