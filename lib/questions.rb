@@ -127,6 +127,10 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
+  # array.slice(0, array.find_index(array.find { |item| item > 5 }))
+  first_element_greater_than_five = array.find { |item| item > 5 }
+  index_of_first_element_greater_than_five = array.find_index(first_element_greater_than_five)
+  array.slice(0, index_of_first_element_greater_than_five)
 end
 
 # turn an array (with an even number of elements) into a hash, by
