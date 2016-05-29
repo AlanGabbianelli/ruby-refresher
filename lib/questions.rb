@@ -106,7 +106,7 @@ end
 # becomes [1, 2, 3, 1, 2, 3]
 def double_array(array)
   [array, array].flatten
-  # or `array + array`
+  # array + array
 end
 
 # convert a symbol into a string
@@ -127,7 +127,6 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
-  # array.slice(0, array.find_index(array.find { |item| item > 5 }))
   first_element_greater_than_five = array.find { |item| item > 5 }
   index_of_first_element_greater_than_five = array.find_index(first_element_greater_than_five)
   array.slice(0, index_of_first_element_greater_than_five)
@@ -137,8 +136,8 @@ end
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
-  # Hash[a.each_slice(2).to_a]
   Hash[*array]
+  # Hash[a.each_slice(2).to_a]
 end
 
 # get all the letters used in an array of words and return
@@ -174,6 +173,7 @@ end
 # round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
+  float.ceil
 end
 
 # round down a float up and convert it to an Integer,
